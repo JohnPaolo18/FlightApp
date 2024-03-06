@@ -2,7 +2,7 @@
 
 <div class="flights-finder">
     <h4>Flight Finder</h4>
-    
+
     <div class="flex-container">
         <div class="flex-item input-container">
             <label for="from">From:</label>
@@ -31,8 +31,48 @@
     </div>
 </div>
 
+<div class="Reserve">
+    <h4>Reserve</h4>
+    <div class="flex-item input-container">
+        <label for="flight code">Flight Code:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="Flight">
+        </div>
+    </div>
+
+    <div class="flex-item input-container">
+        <label for="airline">Airline:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="Airline">
+        </div>
+    </div>
+
+    <div class="flex-item input-container">
+        <label for="day">Day:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="Day">
+        </div>
+    </div>
+
+    <div class="flex-item input-container">
+        <label for="time">Time:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="Time">
+        </div>
+    </div>
+
+    <div class="flex-item button-container">
+        <button type="submit" class="reserve-btn">Reserve</button>
+    </div>
+</div>
+
+
+
+
+
+
 <style>
-    .flights-finder, .Flights {
+    .flights-finder, .Flights, .Reserve {
         text-align: center;
         margin: 20px;
     }
@@ -50,7 +90,7 @@
         .flex-item label {
             display: block;
             text-align: left;
-            font-size:0.8em;
+            font-size: 0.8em;
         }
 
         .flex-item input, .find-flights-btn {
@@ -60,19 +100,30 @@
             font-size: 0.8em;
         }
 
-    .flex-item input:focus{
-        border:1px solid #007bff;
-        outline:none;
-    }
-   
+            .flex-item input:focus {
+                border: 1px solid #007bff;
+                outline: none;
+            }
+
     .find-flights-btn {
         background-color: #007bff;
         color: white;
         border: none;
         cursor: pointer;
     }
+
+    .reserve-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 25%;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-size: 0.8em;
+    }
 </style>
 
-@code{
+@code {
 
 }
