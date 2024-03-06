@@ -2,13 +2,135 @@
 
 <div class="flights-finder">
     <h4>Flight Finder</h4>
+
+    <div class="flex-container">
+        <div class="flex-item input-container">
+            <label for="from">From:</label>
+            <input type="text" id="from" placeholder="Any">
+        </div>
+        <div class="flex-item input-container">
+            <label for="to">To:</label>
+            <input type="text" id="to" placeholder="Any">
+        </div>
+        <div class="flex-item input-container">
+            <label for="day">Day:</label>
+            <input type="text" id="day" placeholder="Any">
+        </div>
+        <div class="flex-item button-container">
+            <button type="submit" class="find-flights-btn">Find Flights</button>
+        </div>
+    </div>
 </div>
+
+<div class="Flights">
+    <h4>Flights</h4>
+    <div class="flex-container">
+        <div class="flex-item">
+            <input type="text" placeholder="Loading...">
+        </div>
+    </div>
+</div>
+
+<div class="Reserve">
+    <h4>Reserve</h4>
+    <div class="flex-item input-container">
+        <label for="flight code">Flight Code:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="Flight">
+        </div>
+    </div>
+    <div class="flex-item input-container">
+        <label for="airline">Airline:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="Airline">
+        </div>
+    </div>
+    <div class="flex-item input-container">
+        <label for="day">Day:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="Day">
+        </div>
+    </div>
+    <div class="flex-item input-container">
+        <label for="time">Time:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="Time">
+        </div>
+    </div>
+    <div class="flex-item input-container">
+        <label for="cost">Flight Cost:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="0">
+        </div>
+    </div>
+    <div class="flex-item input-container">
+        <label for="name">Name:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="Name">
+        </div>
+    </div>
+    <div class="flex-item input-container">
+        <label for="citizenship">Citizenship:</label>
+        <div class="flex-item">
+            <input type="text" placeholder="Citizenship">
+        </div>
+    </div>
+    <div class="flex-item button-container">
+        <button type="submit" class="reserve-btn">Reserve</button>
+    </div>
+</div>
+
 <style>
-    .flights-finder
-    {
+    .flights-finder, .Flights, .Reserve {
         text-align: center;
+        margin: 20px;
     }
 
+    .flex-container {
+        display: flex;
+        align-items: end;
+        gap: 10px;
+    }
+
+    .flex-item {
+        flex: 1;
+    }
+
+    .flex-item label {
+            display: block;
+            text-align: left;
+            font-size: 0.8em;
+        }
+
+        .flex-item input, .find-flights-btn {
+            width: 100%;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+
+            .flex-item input:focus {
+                border: 1px solid #007bff;
+                outline: none;
+            }
+
+    .find-flights-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .reserve-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 25%;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-size: 0.8em;
+    }
 </style>
 
 @code {
