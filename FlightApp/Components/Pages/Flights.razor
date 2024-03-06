@@ -80,14 +80,43 @@
     <div class="flex-item button-container">
         <button type="submit" class="reserve-btn">Reserve</button>
     </div>
+
+    <div class="ReservationCode">
+        <h6>Reservation Code:</h6>
+    </div>
+
+    <div class="Search">
+        <h4>Search</h4>
+    </div>
+
+    <div class="flex-item input-container">
+        <label for="code">Code:</label>
+        <input type="text" id="code" placeholder="Code" />
+    </div>
+
+    <div class="flex-item input-container">
+        <label for="airline">Airline:</label>
+        <input type="text" id="airline" placeholder="Airline" />
+    </div>
+
+    <div class="flex-item input-container">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Name" />
+    </div>
+
+    <div class="flex-item button-container">
+        <button type="submit" class="find-reservations-btn">Find Reservations</button>
+    </div>
+
+    <div class="Reservations">
+        <h4>Reservations</h4>
+    </div>
+
+    <select class="reservations-box" @bind="selectedOption"> </select>
 </div>
 
-
-
-
-
-
 <style>
+
     .flights-finder, .Flights, .Reserve {
         text-align: center;
         margin: 20px;
@@ -103,23 +132,23 @@
         flex: 1;
     }
 
-        .flex-item label {
-            display: block;
-            text-align: left;
-            font-size: 0.8em;
-        }
+    .flex-item label {
+        display: block;
+        text-align: left;
+        font-size: 0.8em;
+    }
 
-        .flex-item input, .find-flights-btn {
-            width: 100%;
-            border: 1px solid #ced4da;
-            border-radius: 4px;
-            font-size: 0.8em;
-        }
+    .flex-item input, .find-flights-btn {
+        width: 100%;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-size: 0.8em;
+    }
 
-            .flex-item input:focus {
-                border: 1px solid #007bff;
-                outline: none;
-            }
+    .flex-item input:focus {
+        border: 1px solid #007bff;
+        outline: none;
+    }
 
     .find-flights-btn {
         background-color: #007bff;
@@ -128,7 +157,7 @@
         cursor: pointer;
     }
 
-    .reserve-btn {
+    .reserve-btn, .find-reservations-btn {
         background-color: #007bff;
         color: white;
         border: none;
@@ -138,8 +167,28 @@
         border-radius: 4px;
         font-size: 0.8em;
     }
+
+    .flights-finder,
+    .ReservationCode,
+    .Search,
+    .Reservations {
+        text-align: center;
+    }
+
+    .reservations-box{
+        width: 100%;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-size: 0.8em;
+        display: block;
+        text-align: left;
+        font-size: 0.8em;
+    }
+
+
+
 </style>
 
 @code {
-
+    string selectedOption { get; set; } = "";
 }
